@@ -48,6 +48,8 @@ export class TaskServiceService {
 
 
   /*
+  This function allows to:
+
     -> update the array tasks using the index parameter
 
     -> set the array tasks in the localStorage using the setItem() function
