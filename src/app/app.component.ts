@@ -9,7 +9,7 @@ import { TaskServiceService } from './task-service.service';
 export class AppComponent implements OnInit {
   title = 'Todo-App';
   task_service = inject(TaskServiceService);
-  tasks_existing:any
+  tasks_existing:any [] = []
   ngOnInit() {
     this.show_task();
   }
@@ -25,5 +25,22 @@ export class AppComponent implements OnInit {
     }
     this.task_service.addTask(task)
     this.show_task();
+  }
+
+  completeTask(index:number){
+    const task = this.tasks_existing[index]
+    task.status = true
+
+    this.task_service.completeTask(index,task)
+    this.show_task();
+
+
+  }
+
+  deleteTask(index:number){
+    this.task_service.deleteTask(index)
+    this.show_task();
+
+
   }
 }

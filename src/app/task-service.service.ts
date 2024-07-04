@@ -26,4 +26,19 @@ export class TaskServiceService {
 
 
   }
+
+  completeTask(index:number, task:any ){
+
+      this.tasks[index] = task;
+      localStorage.setItem(this.key,JSON.stringify (this.tasks))
+
+  }
+
+  deleteTask(index:number){
+
+      this.tasks.splice(index,1)
+      localStorage.setItem(this.key,JSON.stringify (this.tasks))
+
+
+  }
 }
