@@ -14,9 +14,16 @@ export class AppComponent implements OnInit {
     this.show_task();
   }
 
+  /*
+  this function updates the value of the tasks_existing by getting the actual data in the local storage
+  */
   show_task(){
      this.tasks_existing = this.task_service.getTask();
   }
+
+   /*
+  this function adds the new task to the localStorage and updates the value of the tasks_existing by getting the updated data in the local storage
+  */
 
   create_task(task_name:any){
     const task ={
