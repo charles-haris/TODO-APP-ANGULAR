@@ -9,6 +9,12 @@ export class TaskServiceService {
     //this will first load the getTask function by the constructor
     this.getTask()
    }
+       /*
+       -> declaration of the array tasks to add the different tasks
+
+       -> declaration of the key that we will use in the localStorage
+
+       */
 
   tasks : any [] = []
   key : string = "tasks"
