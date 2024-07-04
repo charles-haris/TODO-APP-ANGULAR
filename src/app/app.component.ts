@@ -47,7 +47,10 @@ export class AppComponent implements OnInit {
 
 
   }
-
+ /*
+  this function delate a task using the index and update the array Tasks_existiong
+  in the localStorage and updates the value of the tasks_existing by getting the updated data in the local storage
+  */
   deleteTask(index:number){
     this.task_service.deleteTask(index)
     this.show_task();
