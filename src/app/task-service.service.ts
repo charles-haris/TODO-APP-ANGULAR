@@ -45,6 +45,12 @@ export class TaskServiceService {
 
 
 
+  /*
+    -> update the array tasks using the index parameter
+
+    -> set the array tasks in the localStorage using the setItem() function
+
+  */
   completeTask(index:number, task:any ){
 
       this.tasks[index] = task;
