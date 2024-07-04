@@ -30,14 +30,20 @@ export class TaskServiceService {
 
   }
 
+
+  /*
+    -> add the task in the array tasks using the push() function
+
+    -> set the array tasks in the localStorage using the setItem() function
+
+  */
   addTask(task_data : any){
     this.tasks.push(task_data)
 
     localStorage.setItem(this.key,JSON.stringify (this.tasks))
-    //console.log("--  data Added without problem --");
-
-
   }
+
+
 
   completeTask(index:number, task:any ){
 
