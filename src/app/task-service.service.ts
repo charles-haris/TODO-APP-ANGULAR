@@ -61,7 +61,16 @@ export class TaskServiceService {
       localStorage.setItem(this.key,JSON.stringify (this.tasks))
 
   }
+  /*
+    This function allows to:
 
+    -> delete a task in  the array tasks using  the splice function and the index parameter
+
+    -> set the array tasks in the localStorage using the setItem() function that takes
+       as parameters a key (this.key) and the tasks array usind the JSON.stringify() function
+
+
+  */
   deleteTask(index:number){
 
       this.tasks.splice(index,1)
