@@ -67,7 +67,15 @@ export class TaskServiceService {
     -> delete a task in  the array tasks using  the splice function and the index parameter
 
     -> set the array tasks in the localStorage using the setItem() function that takes
-       as parameters a key (this.key) and the tasks array usind the JSON.stringify() function
+       as parameters a key (this.key) and the tasks array usind the JSON.stringify() function.
+
+      The JSON.stringify() static method converts a JavaScript value to a JSON string, optionally r
+      eplacing values if a replacer function is specified or optionally including only the specified
+      properties if a replacer array is specified.
+
+       example
+       console.log(JSON.stringify({ x: 5, y: 6 }));
+        // Expected output: '{"x":5,"y":6}'
 
 
   */
