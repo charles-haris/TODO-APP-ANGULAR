@@ -34,6 +34,10 @@ export class AppComponent implements OnInit {
     this.show_task();
   }
 
+  /*
+  this function update the status of a task and update the array Tasks_existiong with the updated value
+  in the localStorage and updates the value of the tasks_existing by getting the updated data in the local storage
+  */
   completeTask(index:number){
     const task = this.tasks_existing[index]
     task.status = true
