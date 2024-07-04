@@ -6,8 +6,10 @@ import { Injectable } from '@angular/core';
 export class TaskServiceService {
 
   constructor() {
+    //this will first load the getTask function by the constructor
     this.getTask()
    }
+
   tasks : any [] = []
   key : string = "tasks"
 
