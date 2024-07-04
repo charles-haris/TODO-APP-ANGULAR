@@ -32,6 +32,8 @@ export class TaskServiceService {
 
 
   /*
+  this function allows to :
+
     -> add the task in the array tasks using the push() function
 
     -> set the array tasks in the localStorage using the setItem() function
