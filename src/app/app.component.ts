@@ -10,6 +10,7 @@ export class AppComponent implements OnInit {
   title = 'Todo-App';
   task_service = inject(TaskServiceService);
   tasks_existing:any [] = []
+  empty_field: string = ""
   nb_tasks: number = 0;
   ngOnInit() {
     this.show_task();
@@ -21,6 +22,8 @@ export class AppComponent implements OnInit {
   show_task(){
      this.tasks_existing = this.task_service.getTask();
      this.nb_tasks= this.tasks_existing.length;
+     this.empty_field = ""
+
   }
 
    /*
@@ -34,6 +37,8 @@ export class AppComponent implements OnInit {
     }
     this.task_service.addTask(task)
     this.show_task();
+
+
   }
 
   /*
