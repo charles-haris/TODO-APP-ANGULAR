@@ -19,6 +19,10 @@ export class TaskServiceService {
   tasks : any [] = []
   key : string = "tasks"
 
+
+  /*
+  this function allows us to get the task save in the localStorage
+  */
   getTask(){
 
     const my_task = localStorage.getItem(this.key)
