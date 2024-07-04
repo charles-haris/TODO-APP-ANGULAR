@@ -1,17 +1,20 @@
 <div class="w-50 mx-auto mt-5 px-3 py-4 shadow rounded">
-  <h3>Todo App</h3>
+  <h3>Todo<span class="text-primary">App</span> </h3>
   <div class="d-flex align-items-center" >
     <div class="form-floating mt-3 w-100">
       <!-- to use forms , we must import the class FormsModule in the app.module.ts and add to the array imports -->
       <input type="text" #task_name="ngModel" ngModel  placeholder="" class="form-control" required>
       <label for="">Task Name</label>
     </div>
-    <button class="btn btn-primary mt-3" style="height: 57px; width: 80px; " (click)="create_task(task_name)" >Add</button>
+    <button class="btn btn-primary mt-3" style="height: 57px; width: 80px; " (click)="create_task(task_name)" [disabled]="task_name.invalid">Add</button>
 
   </div>
 
   <div class="shadow rounded mt-3 p-3">
-    <h3>My Tasks</h3>
+    <div class="d-flex justify-content-between">
+      <span class="h3">My Tasks</span><span class="px-4 py-2 rounded end text-white" [ngClass]="{'bg-danger':nb_tasks>=4,'bg-primary':nb_tasks<4}" >{{nb_tasks}}</span>
+
+    </div>
     <hr>
     <div class="shadow py-3 px-4 d-flex justify-content-between align-items-center" *ngFor="let task of tasks_existing; let i=index">
       <h6 class="m-0 p-0"> {{task.name}} </h6>
